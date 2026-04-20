@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #e11d48;
+  --blue: #f5f2ea;
+  --orange: #f43f5e;
+  --pink: #f5c2c7;
+  --dark: #0b0b0b;
+  --dark2: #111111;
+  --dark3: #1a1a1a;
+  --light: #f5f2ea;
+  --white: #ffffff;
+  --ink: #0b0b0b;
+  --ink-soft: rgba(11, 11, 11, 0.7);
+  --grey: #a7a7a7;
+  --border: rgba(245, 242, 234, 0.18);
+  --border-strong: rgba(245, 242, 234, 0.45);
+  --glow-green: 0 0 24px rgba(225, 29, 72, 0.35);
+  --glow-blue: 0 0 24px rgba(245, 242, 234, 0.18);
+  --gutter: clamp(1rem, 3vw, 2.5rem);
+}
+
+body {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+  background: linear-gradient(90deg, rgba(245, 242, 234, 0.04) 1px, transparent 1px) 0 0 / 80px 80px,
+    linear-gradient(180deg, rgba(245, 242, 234, 0.04) 1px, transparent 1px) 0 0 / 80px 80px,
+    radial-gradient(circle at 15% 15%, rgba(225, 29, 72, 0.16), transparent 50%),
+    var(--dark);
+  color: var(--light);
+  font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(245, 242, 234, 0.05), transparent 40%),
+    linear-gradient(300deg, rgba(225, 29, 72, 0.12), transparent 45%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Component styles live in CSS modules under src/components */
